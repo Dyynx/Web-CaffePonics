@@ -8,8 +8,8 @@
   --accent-amber: #d97706;
   --light-bg: #f8f9fa;
 }
-html {
-   scroll-behavior: smooth; /* Efek scroll halus ke seluruh halaman */
+html, body {
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Poppins', sans-serif;
