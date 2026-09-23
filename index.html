@@ -65,7 +65,7 @@
     >
       <div class="container">
         <a class="navbar-brand d-lg-none fw-bold text-success fs-6" href="#">
-          <i class="fa-solid fa-leaf me-1"></i> Anyelir Menu
+          <i class="fa-solid fa-leaf me-1"></i> CaffePonics Menu
         </a>
 
         <button
@@ -89,7 +89,7 @@
               class="offcanvas-title text-success fw-bold"
               id="offcanvasNavbarLabel"
             >
-              <i class="fa-solid fa-leaf me-2"></i>Anyelir Hydroponic
+              <i class="fa-solid fa-leaf me-2"></i>CaffePonics
             </h5>
             <button
               type="button"
@@ -580,7 +580,7 @@
         <hr class="border-secondary my-4" />
         <div class="text-center small text-secondary">
           <p class="mb-0">
-            &copy; 2026 Anyelir Hydroponic & Herbal Bar. All rights reserved.
+            &copy; 2026 CaffePonics & Herbal Bar. All rights reserved.
           </p>
         </div>
       </div>
@@ -596,37 +596,37 @@
           nama: "Kangkung",
           harga: "Rp20.000 | 1kg",
           stok: "5 pcs",
-          img: "picture/Tgs2/kangkung-1024x724.png",
+          img: "asset/picture/Tgs2/kangkung-1024x724.png",
         },
         {
           nama: "Bayam",
           harga: "Rp20.000 | 1kg",
           stok: "5 pcs",
-          img: "picture/Tgs2/Gambar-Daun-Bayam.jpg",
+          img: "asset/picture/Tgs2/Gambar-Daun-Bayam.jpg",
         },
         {
           nama: "Seledri",
           harga: "Rp35.000 | 1kg",
           stok: "5 pcs",
-          img: "picture/Tgs2/Inilah-X-Manfaat-Daun-Seledri-untuk-Kesehatan.jpg.webp",
+          img: "asset/picture/Tgs2/Inilah-X-Manfaat-Daun-Seledri-untuk-Kesehatan.jpg.webp",
         },
         {
           nama: "Pakcoy",
           harga: "Rp20.000 | 1kg",
           stok: "5 pcs",
-          img: "picture/Tgs2/tips-memilih-pakcoy-segarjpg-20221003062126.jpg",
+          img: "asset/picture/Tgs2/tips-memilih-pakcoy-segarjpg-20221003062126.jpg",
         },
         {
           nama: "Selada",
           harga: "Rp35.000 | 1kg",
           stok: "5 pcs",
-          img: "picture/Tgs2/no_brand_sayur_selada_keriting_1_kg_hidroponik_sayur_segar_bebas_pestisida_full01_u96i0ufl.webp",
+          img: "asset/picture/Tgs2/no_brand_sayur_selada_keriting_1_kg_hidroponik_sayur_segar_bebas_pestisida_full01_u96i0ufl.webp",
         },
         {
           nama: "Sawi Hijau",
           harga: "Rp20.000 | 1kg",
           stok: "5 pcs",
-          img: "picture/Tgs2/sawi-1024x724.png",
+          img: "asset/picture/Tgs2/sawi-1024x724.png",
         },
       ];
 
@@ -674,9 +674,9 @@
           items.forEach((item) => {
             let rawImg =
               item.querySelector(".gambar_tgs2")?.getAttribute("src") || "";
-            let cleanImg = rawImg
-              .replace(/^\/?CaffePonics\//, "")
-              .replace(/^\//, "");
+            // KODE BARU (Otomatis diarahkan ke folder asset baru)
+            let fileName = rawImg.split("/").pop(); // Ambil nama filenya saja (contoh: kangkung-1024x724.png)
+            let cleanImg = "asset/picture/Tgs2/" + fileName;
 
             const nama =
               item.querySelector(".nama_tgs2")?.textContent.trim() || "Produk";
